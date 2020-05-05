@@ -2,13 +2,69 @@
 
 // $('css selector').action()
 
-$('h1').text('This is done by JavaScript');
-$('p').css('border', '1px solid red');
-$('p').css('padding', '10px');
-$('h2').toggleClass('blue');
-$('h2').toggleClass('blue');
-$('h2').toggleClass('blue');
 console.log('Script file is loaded.');
+
+$('h1').text('This is done by JavaScript');
+$('h2').toggleClass('blue');
+$('h2').toggleClass('blue');
+
+let name = 'Stefan';
+let age = 32;
+
+age = age + 5;
+
+function myLittleFunction() {
+    // condition: number of ps is smaller than 5
+    // <, >, <=, >=, ===, !==
+    if ($('p').length < 5) {
+      $('main').append('<p>We have a break until 18:06.</p>');
+    } else {
+      console.log('We reached the maximum paragraph number');
+    }
+    $('p').css('border', '1px solid red');
+    $('p').css('padding', '10px');
+  }
+
+myLittleFunction();
+myLittleFunction();
+
+$('#add').click(myLittleFunction);
+$('#remove').click(function () {
+  $('p:last-child').remove();
+});
+
+// Fourth part:
+
+// if (condition that true or false) {
+    // condition is true
+// } else {
+    // condition is false
+// }
+
+let colors = ['orange', 'yellow', 'lime', 'magenta'];
+
+colors.forEach(function (color) {
+    $('#box-container').append('<div class="box"></div>');
+    $('.box:last-child').css('background', color);
+});
+
+for (let i = 0; i < 100; i = i + 1) {
+    console.log("I'll not cheat on the exam.");
+}
+
+
+//$('#box-container').append('<div class="box"></div>');
+//$('.box:last-child').css ('background', colors[0]);
+//$('#box-container').append('<div class="box"></div>');
+//$('.box:last-child').css ('background', colors[1]);
+//$('#box-container').append('<div class="box"></div>');
+//$('.box:last-child').css ('background', colors[2]);
+//$('#box-container').append('<div class="box"></div>');
+//$('.box:last-child').css ('background', colors[3]);
+//$('#box-container').append('<div class="box"></div>');
+//$('.box:last-child').css ('background', colors[4]);
+    
+
 
 // Single line comment
 
